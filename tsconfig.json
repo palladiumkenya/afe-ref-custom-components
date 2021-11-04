@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": ["es2019", "dom", "dom.iterable"],
+    "declaration": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "outDir": "./",
+    "importHelpers": true,
+    "declarationMap": true,
+    "useDefineForClassFields": false
+  },
+  "include": [
+    "**/*.ts",
+  ],
+  "exclude": [],
+}
