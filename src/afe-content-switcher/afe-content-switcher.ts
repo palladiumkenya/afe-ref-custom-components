@@ -38,7 +38,7 @@ export class AfeContentSwitcherElement extends LitElement {
   }
   
   render() {
-    let answerOptions = JSON.parse(JSON.stringify(this.question?.extras?.questionOptions?.answers));
+    let answerOptions = this.question?.extras?.questionOptions?.answers;
     
     if(answerOptions && answerOptions.length>0){
       answerOptions.map(answer=>{

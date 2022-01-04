@@ -1,5 +1,6 @@
 import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
+import multi from '@rollup/plugin-multi-entry';
 import postcss from 'rollup-plugin-postcss';
 import litcss from 'rollup-plugin-postcss-lit';
 import generatePackageJson from 'rollup-plugin-generate-package-json'
@@ -8,12 +9,12 @@ const path = require('path');
 const pkg = require('./package')
 
 export default {
-  input: 'src/index.ts',
+  input: ['src/afe-content-switcher/index.ts','src/afe-content-display/index.ts','src/main/index.ts'],
   output: [
     {
-      dir: 'lib',
       format: 'es',
       sourcemap: true,
+      file: 'lib/web-components.bundled.js',
     }
   ],
   plugins: [
@@ -33,6 +34,7 @@ export default {
       ]
     }),
     litcss(),
+    multi(),
     generatePackageJson({
       baseContents: (pkg) => ({
         name: pkg.name,
