@@ -9,7 +9,7 @@ const path = require('path');
 const pkg = require('./package')
 
 export default {
-  input: ['src/afe-content-switcher/index.ts','src/afe-content-display/index.ts','src/main/index.ts'],
+  input: ['src/afe-content-switcher/index.ts','src/afe-content-display/index.ts','src/afe-content-text/index.ts','src/main/index.ts'],
   output: [
     {
       format: 'es',

@@ -34,10 +34,10 @@ export class MainElement extends LitElement {
   };
 
   customDisplay = {
-    "tag": "afe-content-display",
+    "tag": "afe-content-text",
     "url":"http://localhost:4200/lib/web-components.bundled.js?module",
     "module": "true",
-    "detail": "This is custom component within a page it is displayed at the top of the page"
+    "detail": "This is custom patrick component within a page it is input at the top of the page"
   }
   constructor() {
     super();
@@ -50,7 +50,7 @@ export class MainElement extends LitElement {
     <afe-content-switcher .question=${this.question}></afe-content-switcher>
     </div>
     <div class="bx--row">
-    <afe-content-display .config=${this.customDisplay} ></afe-content-display>
+    <afe-content-text .config=${this.customDisplay} ></afe-content-text>
     </div>
   </div>`;
   }
