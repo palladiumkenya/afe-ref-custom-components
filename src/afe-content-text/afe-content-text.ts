@@ -27,7 +27,7 @@ export class AfeContentTextElement extends LitElement {
   _handleClick(item) {
 if(item.target.value!=""){
     const identifierValue = item.target.value;
-    console.log("identifierValue",identifierValue)
+
     if(identifierValue.length < 10){
       this.name = "Invalid Unique Patient Number(UPN) Format! Should be mfl-clinic number, each 5 digits (accepts 11 digits for existing UPN)"
      }else{
@@ -37,7 +37,7 @@ if(item.target.value!=""){
     let changeEvent = new CustomEvent('on-change', {
       detail: { data: item.target.value }
     });
-    console.log("HERE",changeEvent)
+    
     this.dispatchEvent(changeEvent);
   }
   }
@@ -51,8 +51,7 @@ if(item.target.value!=""){
 
     this.value="";
     return html`
-    <div>
-    Add identifier: 
+    <div>     
     <input type="text" .question=${this.question} value=${this.value} @change=${this._handleClick} />  
     <p>${this.name}</p>
     
