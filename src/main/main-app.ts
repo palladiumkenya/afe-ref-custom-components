@@ -37,7 +37,7 @@ export class MainElement extends LitElement {
     "tag": "afe-content-text",
     "url":"http://localhost:4200/lib/web-components.bundled.js?module",
     "module": "true",
-    "detail": "This is custom patrick component within a page it is input at the top of the page"
+    "detail": "This is custom component within a page it is input at the top of the page"
   }
   constructor() {
     super();
