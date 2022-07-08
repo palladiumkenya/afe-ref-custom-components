@@ -4,12 +4,14 @@ import multi from '@rollup/plugin-multi-entry';
 import postcss from 'rollup-plugin-postcss';
 import litcss from 'rollup-plugin-postcss-lit';
 import generatePackageJson from 'rollup-plugin-generate-package-json'
-import copy from 'rollup-plugin-copy'
+import copy from 'rollup-plugin-copy';
+
 const path = require('path');
 const pkg = require('./package')
 
+
 export default {
-  input: ['src/afe-content-switcher/index.ts','src/afe-content-display/index.ts','src/afe-content-text/index.ts','src/main/index.ts'],
+  input: ['src/afe-content-switcher/index.ts','src/afe-content-display/index.ts', 'src/afe-content-text/index.ts','src/afe-content-hts-final/index.ts','src/afe-content-radio/index.ts', 'src/main/index.ts'],
   output: [
     {
       format: 'es',
